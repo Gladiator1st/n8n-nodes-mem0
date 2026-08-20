@@ -206,7 +206,7 @@ export class Mem0 implements INodeType {
 					minValue: 1,
 					maxValue: 100,
 				},
-				default: 10,
+				default: 50,
 				description: 'Max number of results to return',
 			},
 
@@ -302,7 +302,7 @@ export class Mem0 implements INodeType {
 						const query = this.getNodeParameter('query', i) as string;
 						const userId = this.getNodeParameter('userId', i, '') as string;
 						const agentId = this.getNodeParameter('agentId', i, '') as string;
-						const limit = this.getNodeParameter('limit', i, 10) as number;
+						const limit = this.getNodeParameter('limit', i, 50) as number;
 
 						body = {
 							query,
@@ -324,7 +324,7 @@ export class Mem0 implements INodeType {
 						if (userId) qs.user_id = userId;
 						if (agentId) qs.agent_id = agentId;
 						if (!returnAll) {
-							const limit = this.getNodeParameter('limit', i, 10) as number;
+							const limit = this.getNodeParameter('limit', i, 50) as number;
 							qs.page_size = limit;
 						}
 					} else if (operation === 'delete') {
