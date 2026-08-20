@@ -1,6 +1,6 @@
 {
   "name": "@gladiator1st/n8n-nodes-mem0",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "n8n community node for Mem0 - The Memory Layer for Personalized AI Agents, User Profiles & Continuous Context",
   "author": {
     "name": "Muhammad Qasim",
