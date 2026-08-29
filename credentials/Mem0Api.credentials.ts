@@ -38,6 +38,7 @@ export class Mem0Api implements ICredentialType {
 			url: '/v1/memories/',
 			method: 'GET',
 			qs: {
+				user_id: 'default',
 				page_size: 1,
 			},
 		},
