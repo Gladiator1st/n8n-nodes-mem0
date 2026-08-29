@@ -27,7 +27,7 @@ export class Mem0Api implements ICredentialType {
 		type: 'generic',
 		properties: {
 			headers: {
-				Authorization: '=Token {{$credentials.apiKey}}',
+				Authorization: '={{$credentials.apiKey.trim().startsWith("Token ") ? $credentials.apiKey.trim() : "Token " + $credentials.apiKey.trim().replace(/^[\"\']|[\"\']$/g, "")}}',
 			},
 		},
 	};
